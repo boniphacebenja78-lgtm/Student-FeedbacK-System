@@ -6,9 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     die("Invalid request.");
 }
 
-$name = $_POST["name"] ?? "";
-$email = $_POST["email"] ?? "";
-$message = $_POST["message"] ?? "";
+$name = trim($_POST["name"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$message = trim($_POST["message"] ?? "");
 
 if ($name === "" || $email === "" || $message === "") {
     die("Please fill in all fields.");

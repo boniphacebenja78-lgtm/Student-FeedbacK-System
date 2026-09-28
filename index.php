@@ -2,52 +2,52 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Student Feedback System</title>
 
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
 </head>
 
 <body>
 
-    <h1>Student Feedback System</h1>
+    <div class="container">
 
-    <p>Please fill in the form below to submit your feedback.</p>
+        <h1>Student Feedback System</h1>
 
-    <form id="feedbackForm" action="submit.php" method="POST">
+        <p>Share your feedback with us.</p>
 
-        <label for="name">Full Name:</label>
-        <br>
-        <input type="text" id="name" name="name" placeholder="Enter your full name">
+        <form id="feedbackForm" action="submit.php" method="POST">
 
-        <br><br>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <br>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-        <br><br>
+            <label for="message">Feedback</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-        <label for="course">Course:</label>
-        <br>
-        <input type="text" id="course" name="course" placeholder="Enter your course">
+            <button type="submit">Submit Feedback</button>
 
-        <br><br>
+        </form>
 
-        <label for="feedback">Feedback:</label>
-        <br>
-        <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback"></textarea>
+        <div id="messageBox"></div>
 
-        <br><br>
+        <a href="feedback.php" class="view-link">
+            View Submitted Feedback
+        </a>
 
-        <button type="submit">Submit Feedback</button>
+    </div>
 
-    </form>
+    <script src="script.js"></script>
 
 </body>
 
