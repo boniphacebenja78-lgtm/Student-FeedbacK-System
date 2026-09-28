@@ -3,7 +3,7 @@
 $host = "sql107.infinityfree.com";
 $username = "if0_43028671";
 $password = "9ojrI4zz546DzPk";
-$database = "if0_43028671_feedback system";
+$database = "if0_43028671_feedback";
 
 $conn = new mysqli(
     $host,
